@@ -22,7 +22,6 @@ class Details
         let response = await fetch(Config.baseURI + index + ".json");
         let data = await response.json();
         
-        view_img.style.display = "block";
         
         view_name.innerHTML = data.name;
 
@@ -48,6 +47,7 @@ class Details
         }
         view_level.innerHTML = str;
         view_img.onload = () => {
+            view_img.style.display = "block";
             loading_spin.style.display = "none";
         }
         view_img.src = data.image.replace("ipfs://","https://ipfs.io/ipfs/");
@@ -73,4 +73,19 @@ var getParam = function(key){
 };
 let details = new Details();
 let id = getParam("id");
-details.display(id);
+if(id != null)
+{
+    details.display(id);
+    view_ids.innerHTML = '<a href="./">back</a>';
+}else{
+    loading_spin.style.display = "none";
+    view_img.style.display = "block";
+    view_name.innerHTML = "Super Urban Peaple";
+    
+    let str = "";
+    for(var i=1;i<=294;i++)
+    {
+        str += '<div class="col"><a href="./?id=' + i + '">#' + i + '</a></div>';
+    }
+    view_ids.innerHTML = str;
+}
