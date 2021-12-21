@@ -1,0 +1,36 @@
+  .property-trait{
+    background-color: rgba(21, 178, 229, 0.06);
+    border-radius: 6px;
+    border: 1px solid rgb(21, 178, 229);
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+    width: 150px;
+  }
+  .property-type{
+    color: rgb(21, 178, 229);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .property-value{
+    color: rgb(53, 56, 64);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .numertrait-trait{
+    padding: 10px 5px;
+  }
+  .numertrait-label{
+    text-align: left;
+  }
+  .numertrait-bar{
+    border-radius: 14px;
+    height: 14px;
+    margin-top: 4px;
+    overflow: hidden;
+  }
